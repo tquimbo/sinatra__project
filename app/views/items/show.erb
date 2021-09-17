@@ -1,0 +1,13 @@
+  <h1>Item</h1>
+
+<p><%= @item.name %> - <%= @item.quantity %></p>
+
+
+<% if check_owner(@item) %>
+  <form action="/items/<%=@item.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+
+  <a href="/items/<%=@item.id%>/edit">Edit this Item</a>
+<%end %>
