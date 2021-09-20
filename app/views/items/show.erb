@@ -1,13 +1,13 @@
-  <h1>Item</h1>
+  <h1>Song</h1>
 
-<p><%= @item.name %> - <%= @item.quantity %></p>
+<p><%= @song.name %> - <%= @song.quantity %></p>
 
 
-<% if check_owner(@item) %>
-  <form action="/items/<%=@item.id%>" method="post">
+<% if check_owner(@song) %>
+  <form action="/Songs/<%=@item.id%>" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Delete">
   </form>
 
-  <a href="/items/<%=@item.id%>/edit">Edit this Item</a>
+  <a href="/items/<%=@song.id%>/edit">Edit this Song</a>
 <%end %>

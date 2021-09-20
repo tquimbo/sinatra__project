@@ -1,6 +1,6 @@
 require './config/environment'
 
-class ItemsController < Sinatra::Base
+class SongsController < Sinatra::Base
 
   configure do
     set :public_folder, 'public'
